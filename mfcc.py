@@ -88,4 +88,6 @@ for i in range(n_bins):
     bins[i] = freq_to_bin(frequencies[i],n_fft,sample_rate)
 
 n_filters = 40
-filter_bank = np.zero
+filter_bank = np.zero((n_filters, n_fft_real))
+
+for i in range(1, n_filters):
